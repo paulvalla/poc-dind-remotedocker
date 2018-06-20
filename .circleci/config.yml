@@ -1,7 +1,8 @@
 version: 2
 jobs:
   build:
-    machine: true
+    docker:
+      - image: docker:stable
     steps:
       - checkout
       - setup_remote_docker
