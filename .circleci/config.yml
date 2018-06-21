@@ -6,7 +6,7 @@ jobs:
       - image: docker:dind
     steps:
       - checkout
-      = run:
+      - run:
           name: wait for dind to be up
           command: sleep 10
       - run:
