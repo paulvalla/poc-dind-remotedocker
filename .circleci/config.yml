@@ -2,9 +2,13 @@ version: 2
 jobs:
   build:
     docker:
+      - image: docker:stable
       - image: docker:dind
     steps:
       - checkout
+      = run:
+          name: wait for dind to be up
+          command: sleep 10
       - run:
           name: Build docker image
           command: docker build -t lol .
