@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: wait for dind to be up
-          command: sleep 10
+          command: sleep 600
       - run:
           name: Build docker image
           command: docker build -t lol .
