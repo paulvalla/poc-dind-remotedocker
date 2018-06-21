@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: docker:stable
-      - image: docker:dind
+      - image: nginx
     steps:
       - checkout
       - run:
